@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        body{
+    background:black;
+    /* background: linear-gradient(0deg, rgb(194, 13, 13) 0%, rgb(0, 0, 0) 86%); */
+    background-attachment: fixed;
+    margin:0;
+    font-family: 'Poppins', sans-serif; 
+    font-size: small;
+}
+
+#form{
+    width:300px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding:30px;
+    height: 100vh;
+    margin: 40px auto;
+  
+   
+}
+a{
+    text-decoration: none;
+    color: #ac0d0d;
+}
+h1{
+    text-align: center;
+    color:#ac0d0d;
+}
+
+#form button{
+    background-color: #880404;
+    color:white;
+    border: 1px solid #910101;
+    border-radius: 5px;
+    padding:10px;
+    margin:20px 0px;
+    cursor:pointer;
+    font-size:20px;
+    width:100%;
+}
+
+.input-group{
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.input-group input{
+    border-radius: 5px;
+    font-size:20px;
+    margin-top:5px;
+    padding:10px;
+    border:1px solid rgb(17, 22, 22) ;
+}
+
+/* .input-group input:focus{
+    outline: 0;
+} */
+
+.input-group .error{
+    color:rgb(242, 18, 18);
+    font-size:16px;
+    margin-top: 5px;
+}
+
+.input-group.success input{
+    border-color: #006624;
+}
+
+.input-group.error input{
+    border-color:rgb(255, 0, 0);
+}
+    </style>
+</head>
+<body>
+    <a href="calligraphy.html" style="position: absolute; top: 10px; left: 10px;color: azure;">&lt;- Back</a>
+    <div class="container">
+        <form action="signup.php" method="post"   id="form">
+            <h1>Register</h1>
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="uname1">
+                <div class="error"></div>
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" >
+                <div class="error"></div>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="upswd1" oninput="status()">
+                <p id="pass_mess"></p>
+                <div class="error"></div>
+            </div>
+            <div class="input-group">
+                <label for="cpassword">Confirm Password</label>
+                <input type="password" id="cpassword" name="upswd2">
+                <div class="error"></div>
+            </div>
+            <div class="input-group">
+                <label for="coursename">coursename</label>
+                <input type="text" id="coursename" name="coursename">
+                <div class="error"></div>
+            </div>
+            <button type="submit" onclick="store()">Submit</button>
+            <hr>
+            <p style="display: flex; align-items: center; justify-content: center;">already a user &nbsp;<a href="login.html"><b>Register</b></a></p>
+        </form>
+    </div>
+
+
+</body>
+</html>

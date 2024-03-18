@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        stringArr = ["a", "b", "c", "a", "b", "c", "a", "e"]
+
+
+# duplicate checker
+def isPresent(arr, obj):
+  preset = False
+  for i in arr:
+    if i['string'] == obj['string']:
+      preset = True
+      break
+  return preset
+
+
+
+def oddCount (arr):
+  output = []
+  for i in arr:
+    count = 0
+    for j in arr:
+      if (i == j):
+        count += 1
+    if (count >= 1 and count % 2 != 0):
+      obj = {
+        "string" : i,
+        "count": count
+      }
+      if ((len(output) > 0)):
+        isDup =  isPresent(output, obj)
+        if not  isDup:
+          output.append(obj)
+      else:
+        output.append(obj)
+  return output  
+
+
+
+finalOut = oddCount(stringArr)
+print(finalOut)
+    </script>
+</body>
+</html>
